@@ -1,5 +1,16 @@
+.invisible {
+	visibility: hidden;
+}
+
 #login_form {
 	max-width: 350px;
+}
+
+#button_cancelar {
+	margin: 0px, 15px;
+}
+.minimizar_ancho {
+	max-width: 450px;
 }
 
 #numero_release{
@@ -21,5 +32,7 @@ header.encabezado img {
 
 header.encabezado h1{
 	display: inline-block;
-	margin: 5px;
+	margin: 5px, 15px, 50px, 15px;
 }
+
+

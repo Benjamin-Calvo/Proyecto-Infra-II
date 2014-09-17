@@ -4,18 +4,14 @@
     header("location: system/login.php");
   } 
   else {
-  	
-	//include("system/conect.php");
-	
-		//$query = "SELECT idProyecto,nombreProyecto FROM proyecto"; 
-		//$result = $mysqli->query($query); 
+  	$id_proyecto = $_SESSION["proyecto"];
 ?>
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"><!--Responsive-->
-	<title>Crear Proyectos</title>
+	<title>Crear Sprint</title>
 	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <!--<script src="resources/js/bootstrap.min.js" language="javascript" type="text/javascript"></script>-->
@@ -30,20 +26,12 @@
 		
 		<div class="row">
 			<div class="col-md-12">
-				<form role="form" action="insertar_proyecto.php" method="POST">  <!--Esto es lo que hace que el boton llame a insertarproyecto-->
+				<form role="form" action="insertar_sprint.php" method="POST">  <!--Esto es lo que hace que el boton llame a insersprint-->
 					<br>
           <div class="col-md-12">
-				  	<div class="form-group">
-				    	<label for="nombre_proyecto">Nombre del Proyecto:</label>
-				    	<input name="nombre_proyecto" type="text" class="form-control" id="nombre_proyecto" placeholder="Nombre">
-				  	</div>
-				  	<div class="form-group">
-				    	<label for="descripcion">Descripción:</label>
-						  <textarea name="descripcion" class="form-control" rows="3"></textarea>				  
-					  </div>
 				   	<div class="form-group">
-				    	<label for="numero_release">Numero de Release:</label>
-				    	<input name="numero_release" type="text" class="form-control" id="numero_release" placeholder="#Release">
+				    	<label for="numero_sprint">Numero de Sprint:</label>
+				    	<input name="numero_sprint" type="text" class="form-control" id="numero_sprint" placeholder="#Sprint">
 				    </div>
           </div>
 				    <div class="col-md-12">
@@ -91,20 +79,19 @@
           		        <input name="anno1" type="text" class="form-control" id="anno1" placeholder="Año">
             		</div>
 
-
             		<div class="col-md-3 invisible">
                   <input type="text" class="form-control" value="hola soy una entrada invisible nadie me va ver">
                 </div>
 
                 <div class="col-md-2">
                   <br>
-                  <button type="submit" class="btn btn-primary">Crear Proyecto</button>
+                  <button type="submit" class="btn btn-primary">Crear Sprint</button>
                 </div>
                 
 				</form>
         <div class="col-md-2">
           <br>
-          <a href="index.php"><button class="btn btn-primary pull-left">Cancelar</button></a>
+          <a href="releases.php"><button class="btn btn-primary pull-left">Cancelar</button></anno1>
         </div>
             
 			</div>

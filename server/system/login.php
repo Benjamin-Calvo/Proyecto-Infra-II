@@ -28,9 +28,14 @@
   </head>
 
   <body>
+    <header class='encabezado'>
+      <img src='../resources/images/logo.png'>
+      <h1>SCRUM</h1>
+    </header>
 
     <div class="container" id="login_form">
-      <?php if(isset($_COOKIE["login_error"])) {echo "Usuario o contrase~na incorrectos";} ?>
+
+      <?php if(isset($_COOKIE["login_error"])) {echo "Usuario o contraseña incorrectos";} ?>
       <form class="form-signin" role="form" action="check_login.php" method="POST">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input name="usuario" type="text" class="form-control" placeholder="Usuario" required autofocus>
