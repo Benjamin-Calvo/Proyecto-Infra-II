@@ -1,7 +1,7 @@
 <?php
   session_start();
   if (isset($_SESSION["logged_in"])) {
-    header("location: ../index.php");
+    header("location: ../html/index.php");
   }
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Login</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
@@ -37,12 +37,12 @@
 
       <?php if(isset($_COOKIE["login_error"])) {echo "Usuario o contraseña incorrectos";} ?>
       <form class="form-signin" role="form" action="check_login.php" method="POST">
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <h2 class="form-signin-heading">Iniciar sesión</h2>
         <input name="usuario" type="text" class="form-control" placeholder="Usuario" required autofocus>
         <br>
         <input name="contrasena" type="password" class="form-control" placeholder="Contrasena" required>
         <br>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
       </form>
 
     </div> <!-- /container -->

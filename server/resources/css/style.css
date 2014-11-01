@@ -1,3 +1,9 @@
+.alinear_izq {
+	text-align: left;
+}
+.centrar {
+	text-align: center;
+}
 .invisible {
 	visibility: hidden;
 }
